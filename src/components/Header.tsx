@@ -46,7 +46,7 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group" aria-label="Zea Wisata - Beranda">
-            <AppLogo size={50} />
+            <AppLogo size={90} />
             <div className="flex flex-col leading-none">
               <span
                 className={`font-extrabold text-base tracking-tight transition-colors duration-300 ${

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
@@ -60,48 +61,95 @@ export default function AboutPage() {
       {/* Header dipanggil di sini */}
       <Header />
 
-      {/* pt-32 ditambahkan agar konten tidak tertutup Header yang posisinya fixed */}
-      <main className="min-h-screen bg-background pt-32 pb-16">
+      {/* Tidak ada pt-32, jadi foto langsung nempel ke header */}
+      <main className="min-h-screen bg-background pb-16">
         
-        {/* SECTION 1: ABOUT US */}
-        <section className="py-16 border-b border-border/50">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* SECTION 1: ABOUT US — Hero dengan background panorama3.jpg */}
+        {/* pt-44 memberi ruang agar teks turun ke bawah & tidak ketutupan header */}
+        <section className="relative pt-24 sm:pt-25 pb-20 border-b border-border/50 overflow-hidden">
+          {/* Background Image */}
+          <Image
+            src="/assets/images/panorama3.jpg"
+            alt="Panorama Zea Wisata Tour and Travel"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+
+          {/* Overlay warna primary agar tema warna brand tetap terasa & teks terbaca */}
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/85 via-primary/80 to-primary/95" aria-hidden="true" />
+
+          <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <p className="text-xs font-semibold text-accent tracking-widest uppercase mb-3">
               Tentang Kami
             </p>
 
-            <h1 className="text-4xl sm:text-5xl font-extrabold text-primary tracking-tight mb-6">
+            <h1 className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight mb-6 drop-shadow-md">
               Zea Wisata Tour and Travel
             </h1>
 
             <div className="accent-line w-16 mb-8" />
 
-            <div className="text-muted-foreground text-base sm:text-lg leading-relaxed max-w-4xl space-y-4">
+            <div className="text-white/90 text-base sm:text-lg leading-relaxed max-w-4xl space-y-4">
               <p>
-                Adalah Perusahaan jasa pelayanan perjalanan wisata yang dimulai dari tahun 2017. Berawal dari hobi liburan dan bisa menghasilkan income, juga seiring berjalannya waktu dengan meningkatnya permintaan dari wisatawan Dalam dan Luar Negeri, berdirilah Zea Wisata Tour and Travel.
+                Adalah Perusahaan jasa pelayanan perjalanan wisata yang dimulai dari tahun 2018. Berawal dari hobi jalan-jalan dan berwisata, yang akhirnya bisa menciptakan peluang dan benefit. Seiring dengan perjalan waktu dengan meningkatnya permintaan dari wisatawan Dalam dan Luar Negeri, terbentuklah Zea Wisata Tour and Travel dibawah naungan PT. Zea Nusantara Group yang tercatat dalam akta pendirian
               </p>
+
+              {/* Kartu Legalitas — versi glass biar menyatu dengan background */}
+              <div className="flex justify-center px-4">
+                <div className="w-full max-w-xl rounded-2xl border border-white/20 bg-white/10 backdrop-blur-md px-5 py-5 text-center shadow-lg sm:px-8 sm:py-6">
+                  <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-white/70">
+                    Legalitas Perusahaan
+                  </p>
+
+                  <div className="space-y-3">
+                    <div className="rounded-xl bg-white/10 px-4 py-3">
+                      <p className="text-xs font-medium uppercase tracking-wider text-white/70">
+                        Nomor Induk Berusaha
+                      </p>
+                      <p className="mt-1 break-all text-sm font-semibold tracking-wide text-white sm:text-base">
+                        2708260057839
+                      </p>
+                    </div>
+
+                    <div className="rounded-xl bg-white/10 px-4 py-3">
+                      <p className="text-xs font-medium uppercase tracking-wider text-white/70">
+                        Nomor AHU
+                      </p>
+                      <p className="mt-1 break-words text-sm font-semibold leading-relaxed text-white sm:text-base">
+                        AHU-0068982.AH.01.01.TAHUN 2026
+                      </p>
+                      <p className="mt-1 text-xs text-white/60">
+                        Tanggal 27 Agustus 2026
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               <p>
-                Dengan Legalitas yang resmi kami selalu memberikan pelayanan yang terbaik dalam memberikan fasilitas perjalanan wisatawan dalam dan luar negeri, baik group dan private dengan team yang sudah berpengalaman dan Profesional.
+                Dengan Legalitas yang resmi kami selalu memberikan pelayanan yang terbaik dalam memberikan fasilitas perjalanan wisatawan dalam dan luar negeri, baik group dan private dengan team yang sudah berpengalaman, Profesional dan terpercaya.
               </p>
             </div>
 
-            {/* 3 Pilar About Us */}
+            {/* 3 Pilar About Us — glass cards */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-              <div className="bg-card p-6 rounded-2xl border border-border/50 shadow-sm">
-                <h3 className="text-lg font-bold text-primary mb-3">Respon Cepat</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+              <div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 shadow-lg hover:bg-white/15 transition-colors">
+                <h3 className="text-lg font-bold text-accent mb-3">Respon Cepat</h3>
+                <p className="text-sm text-white/85 leading-relaxed">
                   Kami pastikan setiap perjalanan anda dan mengesankan dengan informasi yang cepat yang bisa kami berikan.
                 </p>
               </div>
-              <div className="bg-card p-6 rounded-2xl border border-border/50 shadow-sm">
-                <h3 className="text-lg font-bold text-primary mb-3">Pelayanan Nyaman</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+              <div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 shadow-lg hover:bg-white/15 transition-colors">
+                <h3 className="text-lg font-bold text-accent mb-3">Pelayanan Nyaman</h3>
+                <p className="text-sm text-white/85 leading-relaxed">
                   Kami memberikan fasilitas yang nyaman selama anda berwisata bersama kami, mulai dari penginapan, makan dan transportasi yang digunakan.
                 </p>
               </div>
-              <div className="bg-card p-6 rounded-2xl border border-border/50 shadow-sm">
-                <h3 className="text-lg font-bold text-primary mb-3">Destinasi Favorite</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+              <div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 shadow-lg hover:bg-white/15 transition-colors">
+                <h3 className="text-lg font-bold text-accent mb-3">Destinasi Favorite</h3>
+                <p className="text-sm text-white/85 leading-relaxed">
                   Tempat – tempat wisata yang kami berikan adalah tempat yang paling iconic di negaranya jadi anda bisa mengabadikan sebagai kenang-kenangan yang tidak akan terlupakan.
                 </p>
               </div>
@@ -166,19 +214,31 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* SECTION 3: OUR PRODUCT & SERVICE */}
-        <section className="py-16 border-b border-border/50">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-extrabold text-primary tracking-tight mb-2">
+        {/* SECTION 3: OUR PRODUCT & SERVICE — background plane.jpg */}
+        <section className="relative py-16 border-b border-border/50 overflow-hidden">
+          {/* Background Image */}
+          <Image
+            src="/assets/images/plane3.jpg"
+            alt="Produk & Layanan Zea Wisata Tour and Travel"
+            fill
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+
+          {/* Overlay warna primary agar tema warna brand tetap terasa & teks terbaca */}
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/85 via-primary/80 to-primary/95" aria-hidden="true" />
+
+          <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-extrabold text-white tracking-tight mb-2">
               Produk & Layanan Kami
             </h2>
             <div className="accent-line w-16 mb-10" />
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {services.map((service, index) => (
-                <div key={index} className="bg-card p-6 rounded-2xl border border-border/50 shadow-sm hover:border-accent/50 transition-colors">
+                <div key={index} className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 shadow-lg hover:bg-white/15 transition-colors">
                   <h3 className="text-lg font-bold text-accent mb-3">{service.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
+                  <p className="text-sm text-white/85 leading-relaxed">
                     {service.desc}
                   </p>
                 </div>

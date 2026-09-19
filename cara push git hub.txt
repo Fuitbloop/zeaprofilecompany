@@ -1,0 +1,8 @@
+git add .
+git commit -m "apa aja"
+git branch -M main(atau tegantung nama branch nya)
+git push -u origin main(atau tegantung nama branch nya)
+
+cara merapihkan baris kode Alt + Z
+
+saya mau tanya nih agar image sebuah web itu rendering dan loading nya agar smooth taruh mana lalu s

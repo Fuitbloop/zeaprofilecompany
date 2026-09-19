@@ -50,11 +50,37 @@ export default function Footer() {
               </a>
               <a
                 href="https://mail.google.com/mail/?view=cm&fs=1&to=zeawisatatourandtravel.smi@gmail.com&su=Konsultasi%20Perjalanan%20-%20Zea%20Wisata"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-9 h-9 rounded-xl bg-white/10 hover:bg-accent hover:text-primary flex items-center justify-center text-white/70 transition-all duration-300"
                 aria-label="Email Zea Wisata"
               >
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <rect x="2" y="4" width="20" height="16" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                </svg>
+              </a>
+              <a
+                href="https://www.instagram.com/zeawisatatourandtravel.smi/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-xl bg-white/10 hover:bg-accent hover:text-primary flex items-center justify-center text-white/70 transition-all duration-300"
+                aria-label="Instagram Zea Wisata"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                </svg>
+              </a>
+              <a
+                href="https://www.tiktok.com/@zeawisatatourandtravel"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-xl bg-white/10 hover:bg-accent hover:text-primary flex items-center justify-center text-white/70 transition-all duration-300"
+                aria-label="TikTok Zea Wisata"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-5.201 1.743l-.002-.001.002.001a2.895 2.895 0 0 1 3.183-4.51v-3.5a6.329 6.329 0 0 0-5.394 10.692 6.33 6.33 0 0 0 10.857-4.424V8.687a8.182 8.182 0 0 0 4.773 1.526V6.79a4.831 4.831 0 0 1-1.003-.104z" />
                 </svg>
               </a>
             </div>
@@ -104,14 +130,14 @@ export default function Footer() {
                 Jawa Barat
               </li>
               <li>
-                <a 
-  href="https://mail.google.com/mail/?view=cm&fs=1&to=zeawisatatourandtravel.smi@gmail.com&su=Konsultasi%20Perjalanan%20-%20Zea%20Wisata" 
-  target="_blank" 
-  rel="noopener noreferrer"
-  className="text-white/80 text-sm hover:text-white transition-colors break-all"
->
-  zeawisatatourandtravel.smi@gmail.com
-</a>
+                <a
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=zeawisatatourandtravel.smi@gmail.com&su=Konsultasi%20Perjalanan%20-%20Zea%20Wisata"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/80 text-sm hover:text-white transition-colors break-all"
+                >
+                  zeawisatatourandtravel.smi@gmail.com
+                </a>
               </li>
               <li>
                 <a
