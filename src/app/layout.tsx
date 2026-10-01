@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   title: 'Zea Wisata | Tour & Travel Sukabumi',
   description: 'Zea Wisata menyediakan paket wisata domestik dan internasional, rental transportasi, ticketing, honeymoon, family gathering, wisata religi, heritage, dan outbound di Sukabumi.',
   icons: {
-    icon: [{ url: '/favicon.ico', type: 'image/x-icon' }],
+    icon: [{ url: '/icon.png', type: 'image/x-icon' }],
   },
 };
 
