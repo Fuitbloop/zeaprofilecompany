@@ -166,7 +166,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-white/40 font-medium">
-            © 2026 PT. ZEA NUSANTARA GROUP. All rights reserved. | made with ❤️ by <a href="https://www.edrahost.my.id/" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-white/70 transition-colors font-medium">Edrahost</a>
+            © 2026 PT. ZEA NUSANTARA GROUP. All rights reserved.
           </p>
           <div className="flex items-center gap-5">
             <Link href="/#" className="text-xs text-white/40 hover:text-white/70 transition-colors font-medium">

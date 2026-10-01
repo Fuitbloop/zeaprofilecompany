@@ -169,7 +169,7 @@ export default function HeroSection() {
           </svg>
         </div>
 
-        {/* Expanding Media — view2.jpg. Style hanya width & height biar flex-center tetap jalan */}
+        {/* Expanding Media — view3.jpg. Style hanya width & height biar flex-center tetap jalan */}
         <div
           ref={mediaRef}
           className="hero-media-container"
@@ -177,7 +177,7 @@ export default function HeroSection() {
           aria-hidden="true"
         >
           <AppImage
-            src="/assets/images/view2.jpg"
+            src="/assets/images/view3.jpg"
             alt="Destinasi wisata Indonesia yang eksotis dengan pantai biru dan langit cerah"
             fill
             priority
@@ -291,9 +291,33 @@ export default function HeroSection() {
         )}
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-40 flex flex-col items-center gap-2 pointer-events-none" aria-hidden="true">
-          <span className="text-white/60 text-xs font-medium tracking-widest uppercase">Scroll</span>
-          <div className="w-px h-10 bg-gradient-to-b from-white/60 to-transparent" />
+        <div className="absolute bottom-6 sm:bottom-10 left-1/2 -translate-x-1/2 z-40 flex flex-col items-center gap-2 pointer-events-none" aria-hidden="true">
+          <style>{`
+            @keyframes swipeGesture {
+              0% { transform: translateY(12px); opacity: 0; }
+              30% { transform: translateY(0px); opacity: 1; }
+              70% { transform: translateY(-12px); opacity: 0; }
+              100% { transform: translateY(-12px); opacity: 0; }
+            }
+            .swipe-gesture-animation {
+              animation: swipeGesture 2s ease-in-out infinite;
+            }
+          `}</style>
+          
+          <span className="text-white/90 text-[10px] sm:text-xs font-bold tracking-[0.2em] sm:tracking-[0.3em] uppercase drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] animate-pulse">
+            Geser Ke Atas
+          </span>
+          
+          <div className="relative flex flex-col items-center justify-center h-12 w-10">
+            {/* Menggunakan gambar hand.png dari folder public */}
+            <img 
+              src="/assets/images/hand.png" 
+              alt="Swipe up gesture" 
+              className="w-8 h-8 sm:w-10 sm:h-10 object-contain swipe-gesture-animation drop-shadow-[0_0_10px_rgba(217,164,65,0.8)]"
+            />
+          </div>
+          
+          <div className="absolute -bottom-4 w-12 h-12 bg-accent/20 rounded-full blur-xl animate-pulse" />
         </div>
       </div>
     </section>
