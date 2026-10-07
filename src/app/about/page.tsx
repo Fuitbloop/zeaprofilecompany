@@ -120,9 +120,6 @@ export default function AboutPage() {
                       <p className="mt-1 break-words text-sm font-semibold leading-relaxed text-white sm:text-base">
                         AHU-0068982.AH.01.01.TAHUN 2026
                       </p>
-                      <p className="mt-1 text-xs text-white/60">
-                        Tanggal 27 Agustus 2026
-                      </p>
                     </div>
                   </div>
                 </div>
